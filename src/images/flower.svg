@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="94px" height="89px" viewBox="0 0 94 89" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>flower</title>
+    <desc>Created with Sketch.</desc>
+    <g id="flower" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M49,26 C49,26 69.6,42.9 48.9,62.2 C48.9,62.2 29.7,46.8 49,26 Z" id="Path" stroke="#000000" stroke-width="2"></path>
+        <path d="M66.9,37.1 C66.9,37.1 51.9,43.2 48.9,56.2 C46,43.2 31,37.1 31,37.1 C26.8,61.8 49,63.1 49,63.1 C49,63.1 71.1,61.8 66.9,37.1 Z" id="Path" stroke="#000000" stroke-width="2"></path>
+        <path d="M22.9,53.3 C22.9,53.3 43.5,48.5 48.9,63.2 C48.9,63.1 29.8,70.7 22.9,53.3 Z" id="Path" stroke="#000000" stroke-width="2"></path>
+        <path d="M75,53.3 C75,53.3 54.4,48.5 49,63.2 C48.9,63.1 68,70.7 75,53.3 Z" id="Path" stroke="#000000" stroke-width="2"></path>
+        <circle id="Oval" fill="#000000" cx="48.9" cy="21.7" r="1.5"></circle>
+        <circle id="Oval" fill="#000000" cx="48.9" cy="68" r="1.5"></circle>
+        <circle id="Oval" fill="#000000" cx="64.4" cy="33.5" r="1.5"></circle>
+        <circle id="Oval" fill="#000000" cx="33.5" cy="33.5" r="1.5"></circle>
+        <path d="M48.7,44.8 C48.7,44.8 45.2,50.7 48.9,53.8 C48.9,53.8 53.1,48.6 48.7,44.8 Z" id="Path" stroke="#000000" stroke-width="2"></path>
+    </g>
+</svg>

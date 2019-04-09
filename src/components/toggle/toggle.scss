@@ -1,0 +1,66 @@
+// .toggle-container {
+//   display: flex;
+//   align-items: center;
+// }
+
+.switch-box {
+  position: relative;
+  overflow: hidden;
+  text-align: left;
+  width: 64px;
+  padding: 4px;
+  // background: #e5e5e5;
+  background: #f7f6f6;
+  border: solid 1px #dddedf;
+  border-radius: 50em;
+  box-sizing: border-box;
+
+  input {
+    position: absolute;
+    left: -9999em;
+  }
+
+  .option {
+    cursor: pointer;
+    display: block;
+    background: none;
+    position: relative;
+    padding: 0;
+    min-height: 0;
+    width: 200px;
+    left: -35px;
+    transition: all ease-in-out 0.5s;
+  }
+
+  .active-state,
+  .inactive-state {
+    text-transform: uppercase;
+    padding: 0 5px;
+    vertical-align: middle;
+    font-size: 15px;
+    display: inline-block;
+  }
+
+  .inactive-state {
+    padding-left: 0;
+    margin-left: 5px;
+  }
+
+  .icon {
+    vertical-align: middle;
+    width: 23px;
+    height: 23px;
+    background: #ffa3a5;
+    border-radius: 50em;
+    display: inline-block;
+    transition: all ease-in-out 0.5s;
+  }
+
+  input:checked ~ .option {
+    left: 0;
+
+    .icon {
+      background: #ffa3a5;
+    }
+  }
+}

@@ -1,0 +1,27 @@
+@import "../../core-styles/core.scss";
+.sub-header-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #e6e6e6;
+  .sub-category {
+    padding: 20px;
+    a {
+      padding: 20px 30px;
+      font-weight: 500;
+      color: #363535;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .sub-header-body {
+    .sub-category {
+      padding: 15px;
+      a {
+        padding: 15px 15px;
+        font-size: 14px;
+      }
+    }
+  }
+}
