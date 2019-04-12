@@ -15,7 +15,7 @@ export default class TranslationService {
       },
       main: {
         upperSection: {
-          buttonPink: "Заказать",
+          buttonPink: "TEST",
           buttonPlay: "Смотреть",
           title: "Работа",
           SubTitle: "Моя страсть",
