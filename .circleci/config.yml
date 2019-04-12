@@ -36,4 +36,9 @@ jobs:
       # run tests!
       - run: npm rebuild node-sass --force
       - run: yarn build
-      - run: npm run deploy
+      deployment:
+        production:
+          branch: master
+          commands:
+              - firebase deploy --token=$FIREBASE_DEPLOY_TOKEN --non-interactive
+        #  - run: npm run deploy
