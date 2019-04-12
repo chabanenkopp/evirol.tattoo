@@ -11,6 +11,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons"
 import { withTranslation } from "../../hoc"
 import "./footer.scss"
+import itua from "../../images/itua_no_text.svg"
 library.add(faFacebookF, faTwitter, faInstagram, faLinkedin)
 
 const Footer = ({ t }) => {
@@ -59,11 +60,17 @@ const Footer = ({ t }) => {
           </IconContainer>
         </UpperRow>
         <MiddleRow>{slogan}</MiddleRow>
-        <BottomRow>
-          <a style={{ color: "black" }} href="https://github.com/chabanenkopp">
+        <SponsorContainer>
+          <a
+            style={{ color: "black", marginRight: "18px", marginBottom: "3px" }}
+            href="https://github.com/chabanenkopp"
+          >
             <Octicon icon={MarkGithub} height={40} />
           </a>
-        </BottomRow>
+          <a href="https://itua.com.ua">
+            <img src={itua} alt="itua" style={{ width: "37px" }} />
+          </a>
+        </SponsorContainer>
       </Wrapper>
     </Container>
   )
@@ -72,14 +79,15 @@ const Footer = ({ t }) => {
 export default withTranslation(Footer)
 
 const Container = styled.footer`
-  background: linear-gradient(245deg, #ff9494, #e9e8e85c, #c3e8f3);
+  background: linear-gradient(245deg, #ff9595, #f7f6f6, #c3ced3e6);
   background-size: 600% 600%;
   animation: Gradient 16s ease infinite;
-  min-height: 400px !important;
-  max-height: 400px !important;
+  -webkit-animation: Gradient 16s ease infinite;
+  -moz-animation: Gradient 16s ease infinite;
+  min-height: 300px !important;
   /* padding: 5% 30px; */
   /* position: relative; */
-  margin-top: 200px;
+  margin-top: 150px;
   @-webkit-keyframes Gradient {
     0% {
       background-position: 0% 50%;
@@ -134,18 +142,29 @@ const UpperRow = styled.div`
 `
 const MiddleRow = styled.div`
   text-transform: uppercase;
-  padding-top: 50px;
+  padding-top: 20px;
   margin: 40px;
   line-height: 1.5rem;
   text-align: center;
 `
-const BottomRow = styled.div`
-  padding-top: 90px;
+const SponsorContainer = styled.div`
   align-self: center;
-  @media (max-width: 450px) {
-    padding-top: 60px;
-  }
-  @media (max-width: 350px) {
-    padding-top: 40px;
-  }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+  margin-bottom: 10px;
 `
+// const BottomRow = styled.div`
+//   padding-top: 50px;
+//   align-self: center;
+//   @media (max-width: 780px) {
+//     padding-top: 20px;
+//   }
+//   @media (max-width: 450px) {
+//     padding-top: 0px;
+//   }
+//   @media (max-width: 350px) {
+//     padding-top: 20px;
+//   }
+// `

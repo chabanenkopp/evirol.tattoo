@@ -1,5 +1,6 @@
 import React, { Component } from "react"
 import { BrowserRouter as Router, Route } from "react-router-dom"
+import styled from "styled-components"
 import MessengerCustomerChat from "react-messenger-customer-chat"
 import Header from "../header"
 import SubHeader from "../sub-header"
@@ -34,7 +35,7 @@ export default class App extends Component {
   render() {
     const { translation, isSliderVisible } = this.state
     return (
-      <div className="main-container">
+      <MainContainer>
         <div className="messenger-test">
           <MessengerCustomerChat
             pageId="2608301482574466"
@@ -82,7 +83,7 @@ export default class App extends Component {
             </div>
           </Router>
         </TranslationProvider>
-      </div>
+      </MainContainer>
     )
   }
 }
@@ -120,3 +121,9 @@ const TeachingTemp = () => (
     Teaching Route
   </div>
 )
+
+const MainContainer = styled.div`
+  @media (max-width: 350px) {
+    width: 105%;
+  }
+`
