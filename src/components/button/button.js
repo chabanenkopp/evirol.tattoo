@@ -46,5 +46,32 @@ const Login = styled.a`
   padding: 1em 2em;
   border-radius: 10px;
 `
+const FormSend = styled.button`
+  cursor: pointer;
+  display: block;
+  align-items: center;
+  justify-content: center;
+  min-width: 7rem;
+  background-color: rgb(255, 255, 255);
+  font-weight: 600;
+  color: rgb(255, 255, 255);
+  /* background-image: linear-gradient(
+    90deg,
+    rgb(70, 152, 216),
+    rgb(102, 219, 243)
+  );
+  box-shadow: rgb(70, 152, 216) 0px 0.8rem 1.1rem -0.7rem; */
+  background-image: linear-gradient(90deg, #ff9494, rgb(252, 200, 190));
+  box-shadow: #ffa3a5 0px 0.8rem 1.1rem -0.7rem;
+  padding-left: 3.5rem;
+  padding-right: 3.5rem;
+  height: 3.5rem;
+  border-style: none;
+  border-radius: 999px;
+  margin: 0 auto;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  font-size: 15px;
+`
 
-export const Button = { Pink, Login }
+export const Button = { Pink, Login, FormSend }

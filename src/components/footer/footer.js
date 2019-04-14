@@ -80,6 +80,7 @@ export default withTranslation(Footer)
 
 const Container = styled.footer`
   background: linear-gradient(245deg, #ff9595, #f7f6f6, #c3ced3e6);
+  /* background: linear-gradient(245deg, #ff9595, #f7f6f6, #5ecaec); */
   background-size: 600% 600%;
   animation: Gradient 16s ease infinite;
   -webkit-animation: Gradient 16s ease infinite;

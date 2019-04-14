@@ -10,6 +10,7 @@ import UpperSection from "../upper-section"
 import Slider from "../slider"
 import SliderOverlay from "../slider-overlay"
 import Footer from "../footer"
+import ContactFormular from "../contact-formular"
 
 const subHeaderRoutes = ["/gallery", "/order", "/teaching"]
 
@@ -79,6 +80,7 @@ export default class App extends Component {
               <Route path="/gallery" render={() => <GalleryTemp />} />
               <Route path="/order" render={() => <OrderTemp />} />
               <Route path="/teaching" render={() => <TeachingTemp />} />
+              <ContactFormular />
               <Footer />
             </div>
           </Router>

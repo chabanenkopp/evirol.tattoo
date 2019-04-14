@@ -7,7 +7,7 @@ const fontSize = {
   H3: "16px",
   H2: "20px",
   H1: "24px",
-  XL: "32px",
+  XL: "40px",
   XXL: "50px"
 }
 
@@ -18,7 +18,7 @@ const getFontWeight = ({ weight }) => `
   font-weight: ${weight || 300};
   `
 
-export const H3 = styled.h2`
+export const H3 = styled.h3`
   font-size: ${fontSize.H3};
   ${getTextColor};
   ${getFontWeight};
@@ -44,5 +44,27 @@ export const XXL = styled.h1`
   }
   @media (max-width: 900px) {
     font-size: 35px;
+  }
+`
+export const XL = styled.h1`
+  font-size: ${fontSize.XL};
+  ${getTextColor};
+  ${getFontWeight};
+  @media (max-width: 1080px) {
+    font-size: 30px;
+  }
+  @media (max-width: 900px) {
+    font-size: 25px;
+  }
+`
+export const L = styled.p`
+  font-size: ${fontSize.L};
+  ${getTextColor};
+  ${getFontWeight};
+  @media (max-width: 1080px) {
+    /* font-size: 30px; */
+  }
+  @media (max-width: 900px) {
+    /* font-size: 25px; */
   }
 `
