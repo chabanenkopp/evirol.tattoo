@@ -72,6 +72,11 @@ const FormSend = styled.button`
   text-transform: uppercase;
   letter-spacing: 0.1rem;
   font-size: 15px;
+  @media (max-width: 450px) {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    height: 3rem;
+  }
 `
 
 export const Button = { Pink, Login, FormSend }
