@@ -176,4 +176,7 @@ const TextAreaContainer = styled.div`
   width: 100%;
   padding: 28px;
   padding-top: 5px;
+  @media (max-width: 1000px) {
+    padding: 0px;
+  }
 `
