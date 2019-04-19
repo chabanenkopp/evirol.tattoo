@@ -10,7 +10,6 @@ import {
   faLinkedin
 } from "@fortawesome/free-brands-svg-icons"
 import { withTranslation } from "../../hoc"
-import "./footer.scss"
 import itua from "../../images/itua_no_text.svg"
 library.add(faFacebookF, faTwitter, faInstagram, faLinkedin)
 
@@ -23,7 +22,7 @@ const Footer = ({ t }) => {
           <IconContainer>
             <IconAttribute href="# " style={{ marginLeft: "0px" }}>
               <div className="change-icon-size">
-                <FontAwesomeIcon
+                <StyledIcon
                   icon={["fab", "twitter"]}
                   style={{ color: "black" }}
                   size="2x"
@@ -32,7 +31,7 @@ const Footer = ({ t }) => {
             </IconAttribute>
             <IconAttribute href="https://www.instagram.com/evirol.tattoo/?hl=en">
               <div className="change-icon-size">
-                <FontAwesomeIcon
+                <StyledIcon
                   icon={["fab", "instagram"]}
                   style={{ color: "black" }}
                   size="2x"
@@ -41,7 +40,7 @@ const Footer = ({ t }) => {
             </IconAttribute>
             <IconAttribute href="https://www.facebook.com/evirol.tattoo">
               <div className="change-icon-size">
-                <FontAwesomeIcon
+                <StyledIcon
                   icon={["fab", "facebook-f"]}
                   style={{ color: "black" }}
                   size="2x"
@@ -49,13 +48,11 @@ const Footer = ({ t }) => {
               </div>
             </IconAttribute>
             <IconAttribute href="# ">
-              <div className="change-icon-size">
-                <FontAwesomeIcon
-                  icon={["fab", "linkedin"]}
-                  style={{ color: "black" }}
-                  size="2x"
-                />
-              </div>
+              <StyledIcon
+                icon={["fab", "linkedin"]}
+                style={{ color: "black" }}
+                size="2x"
+              />
             </IconAttribute>
           </IconContainer>
         </UpperRow>
@@ -156,16 +153,7 @@ const SponsorContainer = styled.div`
   margin-top: 30px;
   margin-bottom: 10px;
 `
-// const BottomRow = styled.div`
-//   padding-top: 50px;
-//   align-self: center;
-//   @media (max-width: 780px) {
-//     padding-top: 20px;
-//   }
-//   @media (max-width: 450px) {
-//     padding-top: 0px;
-//   }
-//   @media (max-width: 350px) {
-//     padding-top: 20px;
-//   }
-// `
+
+const StyledIcon = styled(FontAwesomeIcon)`
+  height: 26px;
+`

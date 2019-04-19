@@ -12,29 +12,29 @@ import SliderOverlay from "../slider-overlay"
 import Footer from "../footer"
 import ContactFormular from "../contact-formular"
 
-const subHeaderRoutes = ["/gallery", "/order", "/teaching"]
+const subHeaderRoutes = ["/gallery", "/order", "/teaching"];
 
 export default class App extends Component {
-  translationService = new TranslationService()
+  translationService = new TranslationService();
   state = {
     translation: this.translationService.tEnglish(),
     language: true,
     isSliderVisible: false
-  }
+  };
   changeLanguage = () => {
-    const { language } = this.state
-    const { tEnglish, tRussian } = this.translationService
-    const translation = language ? tRussian() : tEnglish()
+    const { language } = this.state;
+    const { tEnglish, tRussian } = this.translationService;
+    const translation = language ? tRussian() : tEnglish();
     this.setState({ translation, language: !language })
-  }
+  };
 
   moveOutSlider = () => {
-    const { isSliderVisible } = this.state
+    const { isSliderVisible } = this.state;
     this.setState({ isSliderVisible: !isSliderVisible })
-  }
+  };
 
   render() {
-    const { translation, isSliderVisible } = this.state
+    const { translation, isSliderVisible } = this.state;
     return (
       <MainContainer>
         <div className="messenger-test">
@@ -66,7 +66,7 @@ export default class App extends Component {
                     key={section}
                     path={section}
                     render={({ match }) => {
-                      const { path } = match
+                      const { path } = match;
                       return (
                         <SubHeader
                           currentCategory={path}
@@ -100,7 +100,7 @@ const GalleryTemp = () => (
   >
     Gallery Route
   </div>
-)
+);
 const OrderTemp = () => (
   <div
     style={{
@@ -111,7 +111,7 @@ const OrderTemp = () => (
   >
     Order Route
   </div>
-)
+);
 const TeachingTemp = () => (
   <div
     style={{
@@ -122,10 +122,10 @@ const TeachingTemp = () => (
   >
     Teaching Route
   </div>
-)
+);
 
 const MainContainer = styled.div`
   @media (max-width: 350px) {
     width: 105%;
   }
-`
+`;

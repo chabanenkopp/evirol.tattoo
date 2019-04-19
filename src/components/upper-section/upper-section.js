@@ -14,15 +14,15 @@ const ButtonsContainer = styled.div`
   @media (max-width: 1080px) {
     margin-top: 35px;
   }
-`
+`;
 const WrapperLeft = styled.div`
   flex: 0 0 auto;
-`
+`;
 
 const WrapperRight = styled.div`
   flex: 0 0 auto;
   margin-left: 20px;
-`
+`;
 
 const ImageBorder = styled.div`
   background-color: rgb(255, 255, 255);
@@ -37,12 +37,12 @@ const ImageBorder = styled.div`
     margin-left: 0px;
     width: 90%;
   }
-`
+`;
 
 const RightImage = styled.div`
   padding-bottom: 62.5%;
   background: url(${background}) center center / cover no-repeat;
-`
+`;
 
 const ParagraphWrapper = styled.div`
   margin: 50px 100px 0 0px;
@@ -52,22 +52,22 @@ const ParagraphWrapper = styled.div`
   @media (max-width: 900px) {
     margin: 30px 46px 0px 0px;
   }
-`
+`;
 const LeftBlockWrapper = styled.div`
   margin-top: 120px;
   @media (max-width: 900px) {
     margin-top: 27px;
   }
-`
+`;
 const GridContainer = styled.div`
   margin-left: 100px;
   @media (max-width: 1200px) {
     margin-left: 10px;
   }
-`
+`;
 
 const UpperSection = ({ t }) => {
-  const { buttonPink, title, SubTitle, paragraph } = t.main.upperSection
+  const { buttonPink, title, SubTitle, paragraph } = t.main.upperSection;
   return (
     <GridContainer>
       <Grid.Fr3Fr4 gap>
@@ -92,7 +92,7 @@ const UpperSection = ({ t }) => {
             </ButtonsContainer>
           </LeftBlockWrapper>
         </div>
-        <div className="upper-rifht">
+        <div className="upper-right">
           <ImageBorder>
             <RightImage />
           </ImageBorder>
@@ -100,5 +100,5 @@ const UpperSection = ({ t }) => {
       </Grid.Fr3Fr4>
     </GridContainer>
   )
-}
+};
 export default withTranslation(UpperSection)

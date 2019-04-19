@@ -1,6 +1,7 @@
 import React, { Component } from "react"
 import { Link } from "react-router-dom"
 import styled from "styled-components"
+// import circledLogo from "../../images/flower-02.svg"
 import circledLogo from "../../images/flower-02.svg"
 import { withTranslation } from "../../hoc"
 import "./header.scss"
