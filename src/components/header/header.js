@@ -46,7 +46,7 @@ class Header extends Component {
     render() {
         const {t, onToggle, moveSlider, categories} = this.props;
         const {subHeader} = t;
-        const {tattoo, shop, contacts, login } = t.header;
+        const {tattoo, shop, contacts, login} = t.header;
         const {isWindowScrolled} = this.state;
         const navStyle = {paddingTop: "3px", paddingBottom: "0px"};
         const logoStyle = {height: "50px"};
@@ -87,9 +87,6 @@ class Header extends Component {
             </nav>
         )
     }
-    }
+}
 
-    export
-    default
-
-    withTranslation(Header)
+export default withTranslation(Header)
