@@ -1,19 +1,51 @@
-import React from "react"
+import React, {Component} from "react"
 import styled from "styled-components"
+import ModalVideo from 'react-modal-video'
 import PlaySVG from "../../images/circle_play.svg"
-import { withTranslation } from "../../hoc"
+import {withTranslation} from "../../hoc"
+import './button-play.scss'
+
+class ButtonPlay extends Component {
+    state = {
+        isOpen: false
+    };
+    openModal = () => {
+        this.setState({isOpen: true})
+    };
+    closeModal = () => {
+        this.setState({isOpen: false})
+    };
+
+    render() {
+        const {buttonPlay} = this.props.t.main.upperSection;
+        const videoID = 'IhewikUESbk';
+        return (
+            <div>
+                <ModalVideo channel='youtube' isOpen={this.state.isOpen} videoId={videoID} onClose={this.closeModal}/>
+                <Button onClick={this.openModal}>
+                    <SpanWrapper>
+                        <ImgSpan/>
+                        <TextSpan>{buttonPlay}</TextSpan>
+                    </SpanWrapper>
+                </Button>
+            </div>
+        )
+    }
+}
+
+export default withTranslation(ButtonPlay)
 
 const Button = styled.button`
   cursor: pointer;
   background: none;
   border-style: none;
-`
+`;
 
 const SpanWrapper = styled.span`
   display: flex;
   align-items: center;
   justify-content: center;
-`
+`;
 
 const ImgSpan = styled.span`
   display: block;
@@ -32,7 +64,7 @@ const ImgSpan = styled.span`
     width: 35px;
     height: 35px;
   }
-`
+`;
 
 const TextSpan = styled.span`
   font-size: 1rem;
@@ -42,17 +74,4 @@ const TextSpan = styled.span`
   @media (max-width: 350px) {
     font-size: 0.8rem;
   }
-`
-const ButtonPlay = ({ t }) => {
-  const { buttonPlay } = t.main.upperSection
-  return (
-    <Button onClick={() => {}}>
-      <SpanWrapper>
-        <ImgSpan />
-        <TextSpan>{buttonPlay}</TextSpan>
-      </SpanWrapper>
-    </Button>
-  )
-}
-
-export default withTranslation(ButtonPlay)
+`;
