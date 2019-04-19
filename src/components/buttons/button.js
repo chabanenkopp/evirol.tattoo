@@ -79,4 +79,4 @@ const FormSend = styled.button`
   }
 `
 
-export const Button = { Pink, Login, FormSend }
+export const Buttons = { Pink, Login, FormSend }

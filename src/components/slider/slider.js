@@ -3,7 +3,7 @@ import { Link } from "react-router-dom"
 import styled from "styled-components"
 import { withTranslation } from "../../hoc"
 import Toggle from "../toggle"
-import { Button } from "../button/button"
+import { Buttons } from "../buttons/button"
 import { H3 } from "../../atoms/typography"
 
 const SliderContainer = styled.div`
@@ -19,11 +19,11 @@ const SliderContainer = styled.div`
   background-color: #f2b8b8;
   transform: ${props =>
     props.isVisible ? "translateX(0%)" : "translateX(100%)"};
-`
+`;
 
 const Slider = ({ isVisible, onToggle, routes, t }) => {
-  const { gallery, order, teaching, login } = t.subHeader
-  const categories = [gallery, order, teaching]
+  const { gallery, order, teaching, login } = t.subHeader;
+  const categories = [gallery, order, teaching];
   return (
     <SliderContainer isVisible={isVisible}>
       <ButtonsWrapper>
@@ -41,13 +41,13 @@ const Slider = ({ isVisible, onToggle, routes, t }) => {
             )
           })}
           <div style={{ padding: "15px" }}>
-            <Button.Login href="# ">{login}</Button.Login>
+            <Buttons.Login href="# ">{login}</Buttons.Login>
           </div>
         </ButtonsContainer>
       </ButtonsWrapper>
     </SliderContainer>
   )
-}
+};
 
 export default withTranslation(Slider)
 
@@ -56,13 +56,13 @@ const ButtonsWrapper = styled.div`
   padding-right: 0.9rem;
   background-color: rgb(255, 255, 255);
   height: 100%;
-`
+`;
 
 const ButtonsContainer = styled.div`
   padding-top: 3.5rem;
   display: flex;
   flex-direction: column;
-`
+`;
 const ButtonPadding = styled.span`
   padding: 20px;
-`
+`;

@@ -21,7 +21,8 @@ class ButtonPlay extends Component {
         const videoID = 'IhewikUESbk';
         return (
             <div>
-                <ModalVideo channel='youtube' isOpen={this.state.isOpen} videoId={videoID} onClose={this.closeModal}/>
+                <ModalVideo channel='youtube' isOpen={this.state.isOpen} videoId={videoID} onClose={this.closeModal}
+                            style={{backgroundColor: 'rgba(0, 0, 0, 0.7)'}}/>
                 <Button onClick={this.openModal}>
                     <SpanWrapper>
                         <ImgSpan/>

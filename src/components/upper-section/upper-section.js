@@ -3,7 +3,7 @@ import styled from "styled-components"
 import { withTranslation } from "../../hoc"
 import { Grid } from "../../atoms/grid"
 import { XXL, H2 } from "../../atoms/typography"
-import { Button } from "../button/button"
+import { Buttons } from "../buttons/button"
 import ButtonPlay from "../button-play"
 import background from "../../background-images/iren2.png"
 
@@ -82,9 +82,9 @@ const UpperSection = ({ t }) => {
             </ParagraphWrapper>
             <ButtonsContainer>
               <WrapperLeft>
-                <Button.Pink href="https://www.instagram.com/evirol.tattoo/?hl=en">
+                <Buttons.Pink href="https://www.instagram.com/evirol.tattoo/?hl=en">
                   {buttonPink}
-                </Button.Pink>
+                </Buttons.Pink>
               </WrapperLeft>
               <WrapperRight>
                 <ButtonPlay />

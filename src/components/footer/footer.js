@@ -11,10 +11,10 @@ import {
 } from "@fortawesome/free-brands-svg-icons"
 import { withTranslation } from "../../hoc"
 import itua from "../../images/itua_no_text.svg"
-library.add(faFacebookF, faTwitter, faInstagram, faLinkedin)
+library.add(faFacebookF, faTwitter, faInstagram, faLinkedin);
 
 const Footer = ({ t }) => {
-  const { slogan } = t.footer
+  const { slogan } = t.footer;
   return (
     <Container>
       <Wrapper>
@@ -71,7 +71,7 @@ const Footer = ({ t }) => {
       </Wrapper>
     </Container>
   )
-}
+};
 
 export default withTranslation(Footer)
 
@@ -119,32 +119,32 @@ const Container = styled.footer`
       background-position: 0% 50%;
     }
   }
-`
+`;
 
 const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
-`
+`;
 const IconContainer = styled.div`
   display: flex;
   align-items: center;
   cursor: poinet;
-`
+`;
 
 const IconAttribute = styled.a`
   margin: 50px 0 0 60px;
-`
+`;
 const UpperRow = styled.div`
   display: flex;
   align-self: center;
-`
+`;
 const MiddleRow = styled.div`
   text-transform: uppercase;
   padding-top: 20px;
   margin: 40px;
   line-height: 1.5rem;
   text-align: center;
-`
+`;
 const SponsorContainer = styled.div`
   align-self: center;
   display: flex;
@@ -152,8 +152,8 @@ const SponsorContainer = styled.div`
   justify-content: center;
   margin-top: 30px;
   margin-bottom: 10px;
-`
+`;
 
 const StyledIcon = styled(FontAwesomeIcon)`
   height: 26px;
-`
+`;

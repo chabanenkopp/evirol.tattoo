@@ -1,93 +1,93 @@
-import React, { Component } from "react"
+import React, {Component} from "react"
 import styled from "styled-components"
-import { withTranslation } from "../../hoc"
-import { XL, H3 } from "../../atoms/typography"
-import { Button } from "../button/button"
+import {withTranslation} from "../../hoc"
+import {XL, H3} from "../../atoms/typography"
+import {Buttons} from "../buttons/button"
 
 class ContactFormular extends Component {
-  render() {
-    const {
-      contactUs,
-      title,
-      subTitle,
-      paragraph,
-      submit,
-      placeholder
-    } = this.props.t.contactForm
-    return (
-      <FormContainer>
-        <StyledH3>{contactUs}</StyledH3>
-        <XLWrapper>
-          <XL>{title}</XL>
-          <StyledXL>{subTitle}</StyledXL>
-        </XLWrapper>
-        <ParagraphH3>{paragraph}</ParagraphH3>
-        <form>
-          <InputsWrapper>
-            {inputData.map((input, i) => {
-              const { name, type, required } = input
-              return (
-                <FormInput
-                  key={name}
-                  margin={
-                    name !== "emailSubject" && name !== "email" ? "15px" : "0px"
-                  }
-                  name={name}
-                  type={type}
-                  placeholder={placeholder[i]}
-                  required={required}
-                />
-              )
-            })}
-            <TextAreaContainer>
-              <TextArea placeholder={placeholder[6]} required />
-            </TextAreaContainer>
-          </InputsWrapper>
-          <StyledButton type="submit">{submit}</StyledButton>
-        </form>
-      </FormContainer>
-    )
-  }
+    render() {
+        const {
+            contactUs,
+            title,
+            subTitle,
+            paragraph,
+            submit,
+            placeholder
+        } = this.props.t.contactForm;
+        return (
+            <FormContainer>
+                <StyledH3>{contactUs}</StyledH3>
+                <XLWrapper>
+                    <XL>{title}</XL>
+                    <StyledXL>{subTitle}</StyledXL>
+                </XLWrapper>
+                <ParagraphH3>{paragraph}</ParagraphH3>
+                <form>
+                    <InputsWrapper>
+                        {inputData.map((input, i) => {
+                            const {name, type, required} = input;
+                            return (
+                                <FormInput
+                                    key={name}
+                                    margin={
+                                        name !== "emailSubject" && name !== "email" ? "15px" : "0px"
+                                    }
+                                    name={name}
+                                    type={type}
+                                    placeholder={placeholder[i]}
+                                    required={required}
+                                />
+                            )
+                        })}
+                        <TextAreaContainer>
+                            <TextArea placeholder={placeholder[6]} required/>
+                        </TextAreaContainer>
+                    </InputsWrapper>
+                    <StyledButton type="submit">{submit}</StyledButton>
+                </form>
+            </FormContainer>
+        )
+    }
 }
 
 export default withTranslation(ContactFormular)
 
 const inputData = [
-  {
-    name: "firstName",
-    type: "text",
-    required: true
-  },
-  {
-    name: "lastName",
-    type: "text",
-    required: true
-  },
-  {
-    name: "email",
-    type: "email",
-    required: true
-  },
-  {
-    name: "companyName",
-    type: "text",
-    required: false
-  },
-  {
-    name: "phoneNumber",
-    type: "text",
-    required: false
-  },
-  {
-    name: "emailSubject",
-    type: "text",
-    required: true
-  }
-]
+    {
+        name: "firstName",
+        type: "text",
+        required: true
+    },
+    {
+        name: "lastName",
+        type: "text",
+        required: true
+    },
+    {
+        name: "email",
+        type: "email",
+        required: true
+    },
+    {
+        name: "companyName",
+        type: "text",
+        required: false
+    },
+    {
+        name: "phoneNumber",
+        type: "text",
+        required: false
+    },
+    {
+        name: "emailSubject",
+        type: "text",
+        required: true
+    }
+];
 
-const setMarginRight = ({ margin }) => `
+const setMarginRight = ({margin}) => `
   margin-right: ${margin};
-  `
+  `;
 
 const FormContainer = styled.div`
   /* max-width: 1360px; */
@@ -95,12 +95,12 @@ const FormContainer = styled.div`
   margin: 0 auto;
   padding: 0 40px;
   margin-top: 150px;
-`
+`;
 const XLWrapper = styled.div`
   display: flex;
   justify-content: center;
   margin-bottom: 20px;
-`
+`;
 const InputsWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
@@ -109,7 +109,7 @@ const InputsWrapper = styled.div`
     flex-direction: column;
     flex-wrap: nowrap;
   }
-`
+`;
 const FormInput = styled.input`
   display: block;
   width: 100%;
@@ -130,7 +130,7 @@ const FormInput = styled.input`
     flex: 0 0 100%;
     margin-right: 0px;
   }
-`
+`;
 const TextArea = styled.textarea`
   display: block;
   width: 100%;
@@ -145,7 +145,7 @@ const TextArea = styled.textarea`
   box-sizing: border-box;
   margin-bottom: 20px;
   resize: vertical;
-`
+`;
 
 const StyledH3 = styled(H3)`
   color: #9f9f9f;
@@ -153,7 +153,7 @@ const StyledH3 = styled(H3)`
   text-align: center;
   margin-bottom: 20px;
   letter-spacing: 0.1em;
-`
+`;
 const ParagraphH3 = styled(H3)`
   text-align: center;
   margin-bottom: 35px;
@@ -163,15 +163,15 @@ const ParagraphH3 = styled(H3)`
     margin-left: 0px;
     margin-right: 0px;
   }
-`
+`;
 const StyledXL = styled(XL)`
   color: #ffa3a5;
   margin-left: 10px;
   font-weight: 600;
-`
-const StyledButton = styled(Button.FormSend)`
+`;
+const StyledButton = styled(Buttons.FormSend)`
   margin-top: 20px;
-`
+`;
 const TextAreaContainer = styled.div`
   width: 100%;
   padding: 28px;
@@ -179,4 +179,4 @@ const TextAreaContainer = styled.div`
   @media (max-width: 1000px) {
     padding: 0px;
   }
-`
+`;

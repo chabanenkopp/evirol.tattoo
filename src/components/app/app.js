@@ -57,6 +57,7 @@ export default class App extends Component {
                         <Header
                             onToggle={this.changeLanguage}
                             moveSlider={this.moveOutSlider}
+                            categories={subHeaderRoutes}
                         />
                         <div className="content" style={{marginTop: "100px"}}>
                             <Route path="/" component={UpperSection} exact/>
