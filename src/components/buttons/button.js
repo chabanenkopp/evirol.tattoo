@@ -32,7 +32,7 @@ const Pink = styled.a`
     height: 2.5rem;
     font-size: 12px;
   }
-`
+`;
 
 const Login = styled.a`
   font-size: 0.8rem;
@@ -45,7 +45,7 @@ const Login = styled.a`
   color: #2c333d;
   padding: 1em 2em;
   border-radius: 10px;
-`
+`;
 const FormSend = styled.button`
   cursor: pointer;
   display: block;
@@ -77,6 +77,6 @@ const FormSend = styled.button`
     padding-right: 2.5rem;
     height: 3rem;
   }
-`
+`;
 
-export const Buttons = { Pink, Login, FormSend }
+export const Buttons = { Pink, Login, FormSend };

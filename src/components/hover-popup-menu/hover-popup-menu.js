@@ -100,6 +100,7 @@ const StyledLinks = styled(Link)`
     padding: 0.4rem 0.2rem;
     text-decoration: none;
     color: #2c2b2b;
+    transition: 0.5s;
     &:hover{
      color: #ffa3a5;
     }

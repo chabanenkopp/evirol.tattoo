@@ -44,7 +44,7 @@ class Header extends Component {
     };
 
     render() {
-        const {t, onToggle, moveSlider, categories} = this.props;
+        const {t, onToggle, moveSlider, categories, clickLogin, isLoginClicked} = this.props;
         const {subHeader} = t;
         const {tattoo, shop, contacts, login} = t.header;
         const {isWindowScrolled} = this.state;
@@ -82,7 +82,7 @@ class Header extends Component {
                     />
                     <li>{shop}</li>
                     <li>{contacts}</li>
-                    <li>{login}</li>
+                    <li onClick={!isLoginClicked ? clickLogin : null}>{login}</li>
                 </ul>
             </nav>
         )

@@ -11,6 +11,7 @@ import Slider from "../slider"
 import SliderOverlay from "../slider-overlay"
 import Footer from "../footer"
 import ContactFormular from "../contact-formular"
+import WarningPopup from '../warning-popup'
 
 const subHeaderRoutes = ["/gallery", "/order", "/teaching"];
 
@@ -19,22 +20,30 @@ export default class App extends Component {
     state = {
         translation: this.translationService.tEnglish(),
         language: true,
-        isSliderVisible: false
+        isSliderVisible: false,
+        isLoginClicked: false
     };
     changeLanguage = () => {
         const {language} = this.state;
         const {tEnglish, tRussian} = this.translationService;
         const translation = language ? tRussian() : tEnglish();
-        this.setState({translation, language: !language})
+        this.setState({translation, language: !language});
     };
 
     moveOutSlider = () => {
         const {isSliderVisible} = this.state;
-        this.setState({isSliderVisible: !isSliderVisible})
+        this.setState({isSliderVisible: !isSliderVisible});
     };
 
+    clickLogin = () => {
+        const {isLoginClicked} = this.state;
+        this.setState({isLoginClicked: !isLoginClicked});
+        setTimeout(() => this.setState({isLoginClicked: isLoginClicked}), 4000);
+    };
+
+
     render() {
-        const {translation, isSliderVisible} = this.state;
+        const {translation, isSliderVisible, isLoginClicked} = this.state;
         return (
             <MainContainer>
                 <div className="messenger-test">
@@ -58,7 +67,10 @@ export default class App extends Component {
                             onToggle={this.changeLanguage}
                             moveSlider={this.moveOutSlider}
                             categories={subHeaderRoutes}
+                            clickLogin={this.clickLogin}
+                            isLoginClicked={isLoginClicked}
                         />
+                        <WarningPopup isLoginClicked={isLoginClicked} clickLogin={this.clickLogin}/>
                         <div className="content" style={{marginTop: "100px"}}>
                             <Route path="/" component={UpperSection} exact/>
                             {subHeaderRoutes.map(section => {

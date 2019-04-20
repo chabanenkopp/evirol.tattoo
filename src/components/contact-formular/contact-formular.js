@@ -90,7 +90,6 @@ const setMarginRight = ({margin}) => `
   `;
 
 const FormContainer = styled.div`
-  /* max-width: 1360px; */
   max-width: 900px;
   margin: 0 auto;
   padding: 0 40px;

@@ -7,6 +7,43 @@ import { Buttons } from "../buttons/button"
 import ButtonPlay from "../button-play"
 import background from "../../background-images/iren2.png"
 
+const UpperSection = ({ t }) => {
+  const { buttonPink, title, SubTitle, paragraph } = t.main.upperSection;
+  return (
+      <GridContainer>
+        <Grid.Fr3Fr4 gap>
+          <div className="upper-left">
+            <LeftBlockWrapper>
+              <XXL weight="300">{title}</XXL>
+              <XXL weight="500" color="#ffa3a5">
+                {SubTitle}
+              </XXL>
+              <ParagraphWrapper>
+                <H2 weight="300">{paragraph}</H2>
+              </ParagraphWrapper>
+              <ButtonsContainer>
+                <WrapperLeft>
+                  <Buttons.Pink href="https://www.instagram.com/evirol.tattoo/?hl=en">
+                    {buttonPink}
+                  </Buttons.Pink>
+                </WrapperLeft>
+                <WrapperRight>
+                  <ButtonPlay />
+                </WrapperRight>
+              </ButtonsContainer>
+            </LeftBlockWrapper>
+          </div>
+          <div className="upper-right">
+            <ImageBorder>
+              <RightImage />
+            </ImageBorder>
+          </div>
+        </Grid.Fr3Fr4>
+      </GridContainer>
+  )
+};
+export default withTranslation(UpperSection)
+
 const ButtonsContainer = styled.div`
   display: flex;
   align-items: center;
@@ -65,40 +102,3 @@ const GridContainer = styled.div`
     margin-left: 10px;
   }
 `;
-
-const UpperSection = ({ t }) => {
-  const { buttonPink, title, SubTitle, paragraph } = t.main.upperSection;
-  return (
-    <GridContainer>
-      <Grid.Fr3Fr4 gap>
-        <div className="upper-left">
-          <LeftBlockWrapper>
-            <XXL weight="300">{title}</XXL>
-            <XXL weight="500" color="#ffa3a5">
-              {SubTitle}
-            </XXL>
-            <ParagraphWrapper>
-              <H2 weight="300">{paragraph}</H2>
-            </ParagraphWrapper>
-            <ButtonsContainer>
-              <WrapperLeft>
-                <Buttons.Pink href="https://www.instagram.com/evirol.tattoo/?hl=en">
-                  {buttonPink}
-                </Buttons.Pink>
-              </WrapperLeft>
-              <WrapperRight>
-                <ButtonPlay />
-              </WrapperRight>
-            </ButtonsContainer>
-          </LeftBlockWrapper>
-        </div>
-        <div className="upper-right">
-          <ImageBorder>
-            <RightImage />
-          </ImageBorder>
-        </div>
-      </Grid.Fr3Fr4>
-    </GridContainer>
-  )
-};
-export default withTranslation(UpperSection)
