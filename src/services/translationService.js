@@ -43,7 +43,7 @@ export default class TranslationService {
                     "*Напишите здесь Ваше сообщение..."
                 ]
             },
-            loginWarning:'Функционал находится в разработке'
+            loginWarning:'Логин находится в разработке'
         }
     };
 
@@ -92,7 +92,7 @@ export default class TranslationService {
                     "*Put your message in here..."
                 ]
             },
-            loginWarning:'Login functionality is not yet available'
+            loginWarning:'Login is not yet available'
         }
     }
 }
