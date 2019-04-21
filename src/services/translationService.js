@@ -43,7 +43,7 @@ export default class TranslationService {
                     "*Напишите здесь Ваше сообщение..."
                 ]
             },
-            loginWarning:'Данный функционал находится в разработке'
+            loginWarning:'Функционал находится в разработке'
         }
     };
 
