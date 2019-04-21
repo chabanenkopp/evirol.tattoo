@@ -21,7 +21,7 @@ const SliderContainer = styled.div`
     props.isVisible ? "translateX(0%)" : "translateX(100%)"};
 `;
 
-const Slider = ({ isVisible, onToggle, routes, t }) => {
+const Slider = ({ isVisible, onToggle, routes, isLoginClicked, clickLogin, t }) => {
   const { gallery, order, teaching, login } = t.subHeader;
   const categories = [gallery, order, teaching];
   return (
@@ -41,7 +41,7 @@ const Slider = ({ isVisible, onToggle, routes, t }) => {
             )
           })}
           <div style={{ padding: "15px" }}>
-            <Buttons.Login href="# ">{login}</Buttons.Login>
+            <Buttons.Login href="# " onClick={!isLoginClicked ? clickLogin : null}>{login}</Buttons.Login>
           </div>
         </ButtonsContainer>
       </ButtonsWrapper>

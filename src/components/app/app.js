@@ -54,10 +54,13 @@ export default class App extends Component {
                 </div>
                 <TranslationProvider value={translation}>
                     <Router>
+                        <WarningPopup isLoginClicked={isLoginClicked} clickLogin={this.clickLogin}/>
                         <Slider
                             isVisible={isSliderVisible}
                             onToggle={this.changeLanguage}
                             routes={subHeaderRoutes}
+                            clickLogin={this.clickLogin}
+                            isLoginClicked={isLoginClicked}
                         />
                         <SliderOverlay
                             isVisible={isSliderVisible}
@@ -70,7 +73,7 @@ export default class App extends Component {
                             clickLogin={this.clickLogin}
                             isLoginClicked={isLoginClicked}
                         />
-                        <WarningPopup isLoginClicked={isLoginClicked} clickLogin={this.clickLogin}/>
+                        {/*<WarningPopup isLoginClicked={isLoginClicked} clickLogin={this.clickLogin}/>*/}
                         <div className="content" style={{marginTop: "100px"}}>
                             <Route path="/" component={UpperSection} exact/>
                             {subHeaderRoutes.map(section => {
