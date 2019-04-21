@@ -25,7 +25,7 @@ align-items: center;
 color: white;
 font-weight: 500;
 width: 92%;
-background-color: #e81750;
+background-color: rgba(232, 23, 80, 0.85);
 opacity: 0;
 visibility: hidden;
 transition: all .5s ease-in-out;
